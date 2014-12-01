@@ -3,7 +3,7 @@ module PrintDiamond
 
   def print_diamond(letter)
     if letter == 'A'
-      ['A']
+      [print_line(letter)]
     elsif letter == 'B'
       [' A ', 'B B', ' A ']
     else
