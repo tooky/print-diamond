@@ -7,11 +7,6 @@ module PrintDiamond
     elsif letter == 'B'
       rows = Array('A'..letter) + Array('A'...letter).reverse
       rows.map { |row_letter| pad_out(row_letter, letter, pad_inside(row_letter) }
-      [
-        pad_out('A', letter, pad_inside('A')),
-        pad_out('B', letter, pad_inside('B')),
-        pad_out('A', letter, pad_inside('A')),
-      ]
     else
       [
         pad_out('A', letter, pad_inside('A')),
