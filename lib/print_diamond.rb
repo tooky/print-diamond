@@ -17,14 +17,18 @@ module PrintDiamond
       if letter == 'A'
         letter
       else
-        [letter, ' ' * internal_padding, letter].join
+        [letter, padding, letter].join
       end
     end
 
     private
-    def internal_padding
+    def padding_size
       # 1 -> 1, 2 -> 3, 3 -> 5, ...
       ALPHABET.index(letter) * 2 - 1
+    end
+
+    def padding
+      ' ' * padding_size
     end
   end
 
