@@ -8,12 +8,7 @@ module PrintDiamond
 
   private
   def row(row_letter, diamond_letter)
-    inner = pad_inside(row_letter)
-    pad_out(row_letter, diamond_letter, inner)
-  end
-
-  def pad_inside(letter)
-    Row.new(letter).to_s
+    pad_out(row_letter, diamond_letter, Row.new(row_letter))
   end
 
   def pad_out(letter, mid_letter, thing)
