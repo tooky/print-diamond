@@ -5,9 +5,9 @@ module PrintDiamond
     if letter == 'A'
       [print_line(letter)]
     elsif letter == 'B'
-      [' A ', 'B B', ' A ']
+      [' A ', print_line(letter), ' A ']
     else
-      ['  A  ', ' B B ', 'C   C', ' B B ', '  A  ']
+      ['  A  ', ' B B ', print_line(letter), ' B B ', '  A  ']
     end.join("\n")
   end
 
