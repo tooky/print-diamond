@@ -17,14 +17,21 @@ module PrintDiamond
       if letter == 'A'
         letter
       else
-        [letter, padding, letter].join
+        row = ' ' * row_size
+        row.gsub(/^ /, letter).gsub(/ $/, letter)
       end
+
     end
 
     private
     def padding_size
       # 1 -> 1, 2 -> 3, 3 -> 5, ...
       ALPHABET.index(letter) * 2 - 1
+    end
+
+    def row_size
+      # 0 -> 1, 1 -> 3, 3 -> 7, ...
+      ALPHABET.index(letter) * 2 + 1
     end
 
     def padding
