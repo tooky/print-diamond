@@ -6,7 +6,7 @@ module PrintDiamond
       [pad_inside(letter)]
     elsif letter == 'B'
       [" #{pad_inside('A')} ",
-       pad_inside(letter),
+       pad_out(letter, letter, pad_inside(letter)),
        " #{pad_inside('A')} "]
     else
       ["  #{pad_inside('A')}  ",
