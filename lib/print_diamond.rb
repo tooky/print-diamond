@@ -5,9 +5,9 @@ module PrintDiamond
     if letter == 'A'
       [pad_inside(letter)]
     elsif letter == 'B'
-      [' A ', pad_inside(letter), ' A ']
+      [" #{pad_inside('A')} ", pad_inside(letter), " #{pad_inside('A')} "]
     else
-      ['  A  ', ' B B ', pad_inside(letter), ' B B ', '  A  ']
+      ["  #{pad_inside('A')}  ", " B B ", pad_inside(letter), " B B ", "  #{pad_inside('A')}  "]
     end.join("\n")
   end
 
