@@ -15,7 +15,8 @@ module PrintDiamond
 
     def to_s
       if letter == 'A'
-        letter
+        row = ' ' * row_size
+        row.gsub(/^ /, letter).gsub(/ $/, letter)
       else
         row = ' ' * row_size
         row.gsub(/^ /, letter).gsub(/ $/, letter)
