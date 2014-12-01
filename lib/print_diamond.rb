@@ -5,9 +5,15 @@ module PrintDiamond
     if letter == 'A'
       [pad_inside(letter)]
     elsif letter == 'B'
-      [" #{pad_inside('A')} ", pad_inside(letter), " #{pad_inside('A')} "]
+      [" #{pad_inside('A')} ",
+       pad_inside(letter),
+       " #{pad_inside('A')} "]
     else
-      ["  #{pad_inside('A')}  ", " #{pad_inside('B')} ", pad_inside(letter), " #{pad_inside('B')} ", "  #{pad_inside('A')}  "]
+      ["  #{pad_inside('A')}  ",
+       " #{pad_inside('B')} ",
+       pad_inside(letter),
+       " #{pad_inside('B')} ",
+       "  #{pad_inside('A')}  "]
     end.join("\n")
   end
 
