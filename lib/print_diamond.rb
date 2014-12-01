@@ -3,7 +3,7 @@ module PrintDiamond
 
   def print_diamond(letter)
     if letter == 'A'
-      [pad_inside(letter)]
+      [pad_out(letter, letter, pad_inside(letter))]
     elsif letter == 'B'
       [" #{pad_inside('A')} ",
        pad_out(letter, letter, pad_inside(letter)),
