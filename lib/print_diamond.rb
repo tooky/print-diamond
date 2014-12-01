@@ -7,6 +7,11 @@ module PrintDiamond
   end
 
   private
+  def row(row_letter, diamond_letter)
+    inner = pad_inside(row_letter)
+    pad_out(row_letter, diamond_letter, inner)
+  end
+
   def pad_inside(letter)
     if letter == 'A'
       letter
