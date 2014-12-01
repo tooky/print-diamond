@@ -13,12 +13,7 @@ module PrintDiamond
   end
 
   def pad_inside(letter)
-    if letter == 'A'
-      letter
-    else
-      internal_padding = ALPHABET.index(letter) * 2 - 1
-      [letter, ' ' * internal_padding, letter].join
-    end
+    Row.new(letter).to_s
   end
 
   def pad_out(letter, mid_letter, thing)
