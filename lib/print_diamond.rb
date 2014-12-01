@@ -11,9 +11,7 @@ module PrintDiamond
 
     def initialize(letter)
       @letter = letter
-      @chars = Array.new(row_size) { ' ' }
-      @chars[0] = letter
-      @chars[-1] = letter
+      create_chars
     end
 
     def to_s
@@ -24,6 +22,12 @@ module PrintDiamond
     def row_size
       # 0 -> 1, 1 -> 3, 3 -> 7, ...
       ALPHABET.index(letter) * 2 + 1
+    end
+
+    def create_chars
+      @chars = Array.new(row_size) { ' ' }
+      @chars[0] = letter
+      @chars[-1] = letter
     end
   end
 
