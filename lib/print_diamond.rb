@@ -3,16 +3,16 @@ module PrintDiamond
 
   def print_diamond(letter)
     if letter == 'A'
-      [print_line(letter)]
+      [pad_inside(letter)]
     elsif letter == 'B'
-      [' A ', print_line(letter), ' A ']
+      [' A ', pad_inside(letter), ' A ']
     else
-      ['  A  ', ' B B ', print_line(letter), ' B B ', '  A  ']
+      ['  A  ', ' B B ', pad_inside(letter), ' B B ', '  A  ']
     end.join("\n")
   end
 
   private
-  def print_line(letter)
+  def pad_inside(letter)
     if letter == 'A'
       letter
     else
