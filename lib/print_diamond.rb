@@ -26,4 +26,9 @@ module PrintDiamond
       [letter, ' ' * internal_padding, letter].join
     end
   end
+
+  def pad_out(letter, mid_letter, thing)
+    padding = ALPHABET.index(mid_letter) - ALPHABET.index(letter)
+    [' ' * padding, thing, ' ' * padding]
+  end
 end
