@@ -41,8 +41,16 @@ module PrintDiamond
     end
 
     def to_s
-      padding = ALPHABET.index(diamond_letter) - ALPHABET.index(letter)
-      [' ' * padding, row, ' ' * padding].join
+      [padding, row, padding].join
+    end
+
+    private
+    def padding
+      ' ' * padding_size
+    end
+
+    def padding_size
+      ALPHABET.index(diamond_letter) - ALPHABET.index(letter)
     end
   end
 end
