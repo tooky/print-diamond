@@ -25,4 +25,21 @@ module PrintDiamond
     padding = ALPHABET.index(mid_letter) - ALPHABET.index(letter)
     [' ' * padding, thing, ' ' * padding].join
   end
+
+  class Row
+    attr_reader :letter
+
+    def initialize(letter)
+      @letter = letter
+    end
+
+    def to_s
+      if letter == 'A'
+        letter
+      else
+        internal_padding = ALPHABET.index(letter) * 2 - 1
+        [letter, ' ' * internal_padding, letter].join
+      end
+    end
+  end
 end
