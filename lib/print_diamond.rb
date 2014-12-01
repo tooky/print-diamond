@@ -11,11 +11,13 @@ module PrintDiamond
 
     def initialize(letter)
       @letter = letter
+      @chars = Array.new(row_size) { ' ' }
+      @chars[0] = letter
+      @chars[-1] = letter
     end
 
     def to_s
-      row = ' ' * row_size
-      row.gsub(/^ /, letter).gsub(/ $/, letter)
+      @chars.join
     end
 
     private
