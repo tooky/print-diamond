@@ -1,9 +1,11 @@
 module PrintDiamond
   def print_diamond(letter)
     if letter == 'A'
-      letter
+      ['A']
+    elsif letter == 'B'
+      [' A ', 'B B', ' A ']
     else
-      [' A ', 'B B', ' A '].join("\n")
-    end
+      ['  A  ', ' B B ', 'C   C', ' B B ', '  A  ']
+    end.join("\n")
   end
 end

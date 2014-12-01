@@ -22,4 +22,15 @@ class TestPrintDiamond < MiniTest::Unit::TestCase
     END
     assert_equal expected, print_diamond('B')
   end
+
+  def test_print_c
+    expected = <<-END.unindent.chomp
+      A  
+     B B 
+    C   C
+     B B 
+      A  
+    END
+    assert_equal expected, print_diamond('C')
+  end
 end
