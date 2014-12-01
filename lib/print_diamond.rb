@@ -11,11 +11,6 @@ module PrintDiamond
     pad_out(row_letter, diamond_letter, Row.new(row_letter))
   end
 
-  def pad_out(letter, mid_letter, thing)
-    padding = ALPHABET.index(mid_letter) - ALPHABET.index(letter)
-    [' ' * padding, thing, ' ' * padding].join
-  end
-
   def pad_out(letter, mid_letter, row)
     PaddedRow.new(row, mid_letter)
   end
