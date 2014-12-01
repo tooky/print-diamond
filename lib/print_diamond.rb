@@ -8,11 +8,7 @@ module PrintDiamond
 
   private
   def row(row_letter, diamond_letter)
-    pad_out(row_letter, diamond_letter, Row.new(row_letter))
-  end
-
-  def pad_out(letter, mid_letter, row)
-    PaddedRow.new(row, mid_letter)
+    PaddedRow.new(row_letter, diamond_letter)
   end
 
   class Row
@@ -38,20 +34,16 @@ module PrintDiamond
   end
 
   class PaddedRow
-    attr_reader :diamond_letter, :row
-    def initialize(row, diamond_letter)
-      @row = row
+    attr_reader :diamond_letter, :row, :letter
+    def initialize(letter, diamond_letter)
+      @row = Row.new(letter)
+      @letter = letter
       @diamond_letter = diamond_letter
     end
 
     def to_s
       padding = ALPHABET.index(diamond_letter) - ALPHABET.index(letter)
       [' ' * padding, row, ' ' * padding].join
-    end
-
-    private
-    def letter
-      row.letter
     end
   end
 end
