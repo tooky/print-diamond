@@ -7,14 +7,14 @@ module PrintDiamond
     elsif letter == 'B'
       [
         pad_out('A', letter, pad_inside('A')),
-        pad_out(letter, letter, pad_inside(letter)),
+        pad_out('B', letter, pad_inside('B')),
         pad_out('A', letter, pad_inside('A')),
       ]
     else
       [
         pad_out('A', letter, pad_inside('A')),
         pad_out('B', letter, pad_inside('B')),
-        pad_out(letter, letter, pad_inside(letter)),
+        pad_out('C', letter, pad_inside('C')),
         pad_out('B', letter, pad_inside('B')),
         pad_out('A', letter, pad_inside('A')),
       ]
