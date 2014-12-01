@@ -18,6 +18,18 @@ module PrintDiamond
     Array('A'...letter).reverse
   end
 
+  class Diamond
+    attr_reader :letter
+
+    def initialize(letter)
+      @letter = letter
+    end
+
+    def top
+      Array('A'..letter)
+    end
+  end
+
   class Row
     attr_reader :letter
 
