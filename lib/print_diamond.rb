@@ -2,8 +2,20 @@ module PrintDiamond
   ALPHABET = Array('A'..'Z')
 
   def print_diamond(letter)
-    rows = Array('A'..letter) + Array('A'...letter).reverse
-    rows.map { |row_letter| PaddedRow.new(row_letter, letter) }.join("\n")
+    rows(letter).map { |row_letter| PaddedRow.new(row_letter, letter) }.join("\n")
+  end
+
+  private
+  def rows(letter)
+    top(letter) + bottom(letter)
+  end
+
+  def top(letter)
+    Array('A'..letter)
+  end
+
+  def bottom(letter)
+    Array('A'...letter).reverse
   end
 
   class Row
