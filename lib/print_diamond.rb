@@ -4,6 +4,8 @@ module PrintDiamond
   def print_diamond(letter)
     if letter == 'A'
       [pad_out(letter, letter, pad_inside(letter))]
+      rows = Array('A'..letter) + Array('A'...letter).reverse
+      rows.map { |row_letter| pad_out(row_letter, letter, pad_inside(row_letter)) }
     else
       rows = Array('A'..letter) + Array('A'...letter).reverse
       rows.map { |row_letter| pad_out(row_letter, letter, pad_inside(row_letter)) }
