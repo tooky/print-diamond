@@ -3,12 +3,7 @@ module PrintDiamond
 
   def print_diamond(letter)
     rows = Array('A'..letter) + Array('A'...letter).reverse
-    rows.map { |row_letter| row(row_letter, letter) }.join("\n")
-  end
-
-  private
-  def row(row_letter, diamond_letter)
-    PaddedRow.new(row_letter, diamond_letter)
+    rows.map { |row_letter| PaddedRow.new(row_letter, letter) }.join("\n")
   end
 
   class Row
