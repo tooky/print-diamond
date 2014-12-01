@@ -16,6 +16,10 @@ module PrintDiamond
     [' ' * padding, thing, ' ' * padding].join
   end
 
+  def pad_out(letter, mid_letter, row)
+    PaddedRow.new(row, mid_letter)
+  end
+
   class Row
     attr_reader :letter
 
