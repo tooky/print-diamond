@@ -37,4 +37,22 @@ module PrintDiamond
       ALPHABET.index(letter) * 2 - 1
     end
   end
+
+  class PaddedRow
+    attr_reader :diamond_letter, :row
+    def initialize(row, diamond_letter)
+      @row = row
+      @diamond_letter = diamond_letter
+    end
+
+    def to_s
+      padding = ALPHABET.index(diamond_letter) - ALPHABET.index(letter)
+      [' ' * padding, row, ' ' * padding].join
+    end
+
+    private
+    def letter
+      row.letter
+    end
+  end
 end
