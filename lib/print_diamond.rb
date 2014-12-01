@@ -16,7 +16,8 @@ module PrintDiamond
     if letter == 'A'
       letter
     else
-      [letter, ' ' * ALPHABET.index(letter), letter].join
+      internal_padding = ALPHABET.index(letter) * 2 - 1
+      [letter, ' ' * internal_padding, letter].join
     end
   end
 end
