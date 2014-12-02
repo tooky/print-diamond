@@ -11,7 +11,7 @@ module PrintDiamond
   end
 
   def top(letter)
-    Array('A'..letter)
+    Diamond.new(letter).top
   end
 
   def bottom(letter)
