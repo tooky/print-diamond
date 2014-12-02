@@ -15,7 +15,7 @@ module PrintDiamond
   end
 
   def bottom(letter)
-    Array('A'...letter).reverse
+    Diamond.new(letter).bottom
   end
 
   class Diamond
@@ -27,6 +27,10 @@ module PrintDiamond
 
     def top
       Array('A'..letter)
+    end
+
+    def bottom
+      Array('A'...letter).reverse
     end
   end
 
