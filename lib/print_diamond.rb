@@ -7,15 +7,7 @@ module PrintDiamond
 
   private
   def rows(letter)
-    top(letter) + bottom(letter)
-  end
-
-  def top(letter)
-    Diamond.new(letter).top
-  end
-
-  def bottom(letter)
-    Diamond.new(letter).bottom
+    Diamond.new(letter).rows
   end
 
   class Diamond
@@ -23,6 +15,10 @@ module PrintDiamond
 
     def initialize(letter)
       @letter = letter
+    end
+
+    def rows
+      top + bottom
     end
 
     def top
