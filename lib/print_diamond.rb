@@ -2,7 +2,7 @@ module PrintDiamond
   ALPHABET = Array('A'..'Z')
 
   def print_diamond(letter)
-    rows(letter).map { |row_letter| PaddedRow.new(row_letter, letter) }.join("\n")
+    Diamond.new(letter).to_s
   end
 
   private
@@ -15,6 +15,10 @@ module PrintDiamond
 
     def initialize(letter)
       @letter = letter
+    end
+
+    def to_s
+      rows.map { |row_letter| PaddedRow.new(row_letter, letter) }.join("\n")
     end
 
     def rows
