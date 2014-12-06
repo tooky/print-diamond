@@ -5,11 +5,6 @@ module PrintDiamond
     Diamond.new(letter).to_s
   end
 
-  private
-  def rows(letter)
-    Diamond.new(letter).rows
-  end
-
   class Diamond
     attr_reader :letter
 
